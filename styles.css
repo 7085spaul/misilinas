@@ -1,0 +1,176 @@
+body {
+
+
+     margin: 0;
+padding: 0; 
+    font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr );
+    grid-gap: 10px;
+width: 400px;
+height: 200px;
+
+
+
+
+
+
+/* height: 100vh; */
+    grid-template-areas: 
+        "a b b c d e e"
+        "f g g g h e e"
+        "f g g g i e e"
+        "f j j j i k l"
+        "m j j j n o l"
+        "m j j j n p q"
+        "r j j j n s q";
+}
+
+.container > :nth-child(1) {
+    grid-area: a;
+    background-color: lime;
+
+
+}
+
+.container > :nth-child(2) {
+    grid-area: b;
+    background-color: red;
+}
+
+.container > :nth-child(3) {
+    grid-area: c;
+    background-color: orange;
+}
+
+.container > :nth-child(4) {
+    grid-area: d;
+    background-color: yellow;
+}
+
+.container > :nth-child(5) {
+    grid-area: e;
+    background-color: green;
+}
+
+.container > :nth-child(6) {
+    grid-area: f;
+    background-color: aqua;
+}
+
+.container > :nth-child(7) {
+    grid-area: g;
+    background-color: magenta;
+}
+
+.container > :nth-child(8) {
+    grid-area: h;
+    background-color: purple;
+}
+
+.container > :nth-child(9) {
+    grid-area: i;
+    background-color: pink;
+}
+
+.container > :nth-child(10) {
+    grid-area: j;
+    background-color: navy;
+}
+
+.container > :nth-child(11) {
+    grid-area: k;
+    background-color: brown;
+}
+
+.container > :nth-child(12) {
+    grid-area: l;
+    background-color: violet;
+}
+
+.container > :nth-child(13) {
+    grid-area: m;
+    background-color: teal;
+}
+
+.container > :nth-child(14) {
+    grid-area: n;
+    background-color: olive;
+}
+
+.container > :nth-child(15) {
+    grid-area: o;
+    background-color: maroon;
+}
+
+.container > :nth-child(16) {
+    grid-area: p;
+    background-color: cyan;
+}
+
+.container > :nth-child(17) {
+    grid-area: q;
+    background-color: gold;
+}
+
+.container > :nth-child(18) {
+    grid-area: r;
+    background-color: silver;
+}
+
+.container > :nth-child(19) {
+    grid-area: s;
+    background-color: gray;
+}
+/* Define the keyframes for zoom-in and zoom-out */
+@keyframes zoomIn {
+    0% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.05); /* Zoom in slightly */
+    }
+    100% {
+        transform: scale(1); /* Zoom out to original size */
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.05); /* Start zoomed in */
+    }
+    50% {
+        transform: scale(1); /* Zoom out */
+    }
+    100% {
+        transform: scale(1.05); /* Zoom back in */
+    }
+}
+
+/* Apply the animation to all images */
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensure images cover the entire grid area */
+}
+
+/* Apply zoom in animation to half of the images */
+.container > :nth-child(odd) img {
+    animation: zoomIn 5s infinite; /* 5 seconds for the full zoom in and out, loop infinitely */
+}
+
+/* Apply zoom out animation to the other half */
+.container > :nth-child(even) img {
+    animation: zoomOut 5s infinite; /* 5 seconds for the full zoom out and in, loop infinitely */
+}
+
+
